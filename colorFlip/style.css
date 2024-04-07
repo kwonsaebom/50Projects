@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+
+    align-items: center;
+    background-color: red;
+}
+
+.box {
+    width: flex;
+    height: 80px;
+
+    text-align: center;
+
+    background-color: black;
+    border-radius: 5px;
+}
+
+#textColor {
+    display: inline-block;
+    color: #ffffff;
+}
+
+#realColor {
+    display: inline-block;
+    color: rgb(141, 141, 212);
+}
+
+#click {
+    border: 2px solid rgb(112, 112, 229);
+}
