@@ -1,0 +1,102 @@
+body {
+  margin: unset;
+  padding: unset;
+}
+
+button {
+  margin: unset;
+  padding: unset;
+}
+
+span {
+  margin: unset;
+  padding: unset;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root {
+  --progress-gap: 80px;
+  --border-width: 3px;
+  --color-border-fill: #3498db;
+  --color-border-empty: #e0e0e0;
+  --color-text: #999;
+}
+
+body {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.progress-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--progress-gap);
+}
+
+.step {
+  color: var(--color-text);
+  width: 30px;
+  height: 30px;
+  border: var(--border-width) solid var(--color-border-empty);
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  transition: 0.4s ease-in;
+}
+.step::before {
+  content: "";
+  display: block;
+  width: calc((var(--progress-gap)) + (var(--border-width)));
+  height: 3px;
+  background-color: var(--color-border-empty);
+
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  z-index: -1;
+  transform: translate(0, -50%);
+}
+
+.step.first::before {
+  display: none;
+}
+
+.step.active {
+  border: 3px solid var(--color-border-fill);
+}
+.step.active::before {
+  background-color: var(--color-border-fill);
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+}
+
+.button {
+  background-color: var(--color-border-fill);
+  border: none;
+  border-radius: 6px;
+  padding: 8px 30px;
+
+  color: white;
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+.button:disabled {
+  background-color: var(--color-border-empty);
+}
