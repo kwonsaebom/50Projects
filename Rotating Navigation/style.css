@@ -1,0 +1,9 @@
+body {
+  margin: unset;
+  padding: unset;
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 50px auto;
+}
