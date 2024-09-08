@@ -9,5 +9,5 @@ body {
 }
 
 .image {
-  width: 300px;
+  width: fit-content;
 }
