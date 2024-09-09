@@ -1,6 +1,39 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
 body {
   margin: unset;
   padding: unset;
+}
+
+h1,
+h3,
+p,
+button,
+a,
+ul {
+  margin: unset;
+  padding: unset;
+
+  font-weight: unset;
+  font-size: unset;
+  font-style: unset;
+  color: unset;
+  text-decoration: unset;
+}
+li {
+  list-style-type: none;
+}
+
+:root {
+  --color-menu: #ff7979;
+  --color-black: #222;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  color: var(--color-black);
+  box-sizing: border-box;
+  background-color: #333;
 }
 
 .wrapper {
@@ -8,6 +41,121 @@ body {
   margin: 50px auto;
 }
 
-.image {
-  width: fit-content;
+.menu {
+  background-color: var(--color-menu);
+  width: 200px;
+  height: 200px;
+
+  border-radius: 50%;
+
+  position: fixed;
+  top: -100px;
+  left: -100px;
+
+  z-index: 1;
+
+  transition: transform 0.5s linear;
+}
+
+.container {
+  background-color: white;
+  padding: 50px;
+  width: 100vw;
+  min-height: 100vh;
+  transition: transform 0.5s linear;
+
+  transform-origin: top left;
+}
+
+.container.show-nav {
+  transform: rotate(-20deg);
+}
+
+.container.show-nav .menu {
+  transform: rotate(-70deg);
+}
+
+.title {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.sub-title {
+  font-style: italic;
+  color: #555;
+}
+
+.content {
+  margin: 16px 0;
+  line-height: 1.5;
+  color: #333;
+}
+
+.image-name {
+  font-size: 1.17em;
+  margin: 18px 0;
+}
+
+.dog {
+  width: 100%;
+}
+
+button {
+  background: transparent;
+  border: none;
+
+  color: white;
+  font-size: 26px;
+
+  cursor: pointer;
+
+  position: absolute;
+  z-index: 999;
+
+  transition: transform 0.5s linear;
+}
+
+button#open {
+  top: 65%;
+  left: 60%;
+}
+
+button#close {
+  top: 65%;
+  left: 35%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+
+nav {
+  color: white;
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+}
+nav ul {
+  padding-left: 30px;
+}
+nav li {
+  text-transform: uppercase;
+  margin: 40px 0;
+  transform: translateX(-200%);
+  transition: transform 0.4s ease-in;
+}
+
+nav ul li i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+nav ul li + li {
+  margin-left: 15px;
+}
+nav ul li + li + li {
+  margin-left: 30px;
+}
+
+.container.show-nav + nav li {
+  transform: translateX(0);
+  transition-delay: 0.3s;
 }
