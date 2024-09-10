@@ -37,13 +37,11 @@ input {
 
   border: none;
   width: 0;
-
   font-size: 18px;
   text-decoration: none;
 }
 
 .container.active .input {
   width: 150px;
-
   padding: 15px;
 }
