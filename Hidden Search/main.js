@@ -1,14 +1,14 @@
 const input = document.querySelector(".input");
 const button = document.querySelector(".search");
+const container = document.querySelector(".container");
 
 let search = false;
-
 button.addEventListener("click", () => {
   if (search === true) {
-    input.style.display = "none";
+    container.classList.remove("active");
     search = false;
   } else {
-    input.style.display = "block";
+    container.classList.add("active");
     search = true;
   }
 });
