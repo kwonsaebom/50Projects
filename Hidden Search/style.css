@@ -1,0 +1,37 @@
+body _ {
+  margin: unset;
+  padding: unset;
+}
+input {
+  all: unset;
+}
+.wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #7d5fff;
+}
+
+.container {
+  display: flex;
+  height: 50px;
+  background-color: white;
+}
+
+.search {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  width: 50px;
+}
+
+.input {
+  display: none;
+  border: none;
+  width: 150px;
+  padding: 15px;
+  font-size: 18px;
+  text-decoration: none;
+}
