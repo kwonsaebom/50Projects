@@ -5,6 +5,7 @@ body {
   padding: unset;
 
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 h1,
@@ -59,12 +60,15 @@ body {
 
   position: relative;
 
-  transform: translateX(-800px);
+  transform: translateX(-200%);
   transition: transform 0.4s ease;
 }
 
+.box:nth-of-type(even) {
+  transform: translateX(200%);
+}
 .box.show {
-  transform: translateX(0px);
+  transform: translateX(0);
   transition: transform 0.4s ease;
 }
 .box-content {
