@@ -31,10 +31,15 @@ body {
   align-items: center;
 
   margin: 0 -100px;
+  position: relative;
 }
 
 .loading {
   color: white;
   font-size: 50px;
   font-weight: 600;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
