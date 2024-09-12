@@ -41,7 +41,7 @@ body {
   position: relative;
 }
 
-.container:hover {
+.container.hover {
   flex-grow: 3;
 }
 
