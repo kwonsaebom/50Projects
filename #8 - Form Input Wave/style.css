@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css?family=Muli");
+
+/* reset */
+body,
+span {
+  margin: unset;
+  padding: unset;
+}
+
+h1,
+p,
+a {
+  margin: unset;
+  padding: unset;
+
+  font-size: unset;
+  font-family: unset;
+  font-weight: unset;
+  font-style: unset;
+
+  text-decoration: unset;
+  color: unset;
+}
+
+input {
+  all: unset;
+}
+
+/* layout */
+.wrapper {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* variable */
+
+:root {
+  --color-background: steelblue;
+  --color-container: rgba(0, 0, 0, 0.4);
+  --color-button: lightblue;
+
+  font-family: "Muli", sans-serif;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* design */
+body {
+  background-color: var(--color-background);
+}
+
+.form-container {
+  background-color: var(--color-container);
+  border-radius: 5px;
+
+  width: 300px;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 40px;
+
+  padding: 40px 40px;
+}
+
+.title {
+  align-self: center;
+
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.input-container {
+  width: 100%;
+  box-shadow: inset 0 0 5px red;
+
+  position: relative;
+}
+
+label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+
+  font-size: 18px;
+}
+
+label.active {
+  color: var(--color-button);
+}
+
+input {
+  width: 100%;
+  padding: 15px 0;
+  border-bottom: 2px solid white;
+  box-shadow: inset 0 0 5px green;
+}
+
+input:focus {
+  border-color: var(--color-button);
+}
+
+.alert {
+  display: none;
+
+  background-color: white;
+  width: fit-content;
+
+  color: black;
+  font-size: 14px;
+
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+}
+
+.login {
+  width: 100%;
+  height: 50px;
+
+  background-color: var(--color-button);
+  border: none;
+  border-radius: 5px;
+
+  font-size: 15px;
+
+  cursor: pointer;
+}
+
+.login:active {
+  transform: scale(0.98);
+}
+.register-link {
+  color: var(--color-button);
+}

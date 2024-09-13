@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Input Wave</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <form class="form-container">
+        <h1 class="title">Please Login</h1>
+
+        <div class="input-container">
+          <label for="email">
+            <span style="transition-delay: 0ms">E</span>
+            <span style="transition-delay: 50ms">m</span>
+            <span style="transition-delay: 100ms">a</span>
+            <span style="transition-delay: 150ms">i</span>
+            <span style="transition-delay: 200ms">l</span>
+          </label>
+          <input type="text" id="email" />
+          <div class="alert">이 입력칸을 작성하세요.</div>
+        </div>
+        <div class="input-container">
+          <label for="password">
+            <span style="transition-delay: 0ms">P</span>
+            <span style="transition-delay: 50ms">a</span>
+            <span style="transition-delay: 100ms">s</span>
+            <span style="transition-delay: 150ms">s</span>
+            <span style="transition-delay: 200ms">w</span>
+            <span style="transition-delay: 250ms">o</span>
+            <span style="transition-delay: 300ms">r</span>
+            <span style="transition-delay: 350ms">d</span>
+          </label>
+          <input type="password" id="password" />
+        </div>
+        <button type="submit" class="login">Login</button>
+        <p>
+          Don't have an account? <a class="register-link" href="#">Register</a>
+        </p>
+      </form>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
