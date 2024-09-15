@@ -4,6 +4,7 @@ const loginButton = document.querySelector(".login");
 loginButton.addEventListener("submit", () => {
   if (email.trim().length === 0) {
     alert();
+  } else if (email) {
   } else {
     alert();
   }
