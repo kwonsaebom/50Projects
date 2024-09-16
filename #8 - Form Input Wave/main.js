@@ -5,6 +5,7 @@ loginButton.addEventListener("submit", () => {
   if (email.trim().length === 0) {
     alert();
   } else if (email) {
+  } else if (email) {
   } else {
     alert();
   }
