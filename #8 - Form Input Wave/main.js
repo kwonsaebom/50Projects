@@ -1,13 +1,11 @@
-const formNode = document.querySelector(".form-container");
-const loginButton = document.querySelector(".login");
+const labels = document.querySelectorAll(".input-container");
 
-loginButton.addEventListener("submit", () => {
-  if (email.trim().length === 0) {
-    alert();
-  } else if (email) {
-  } else if (email) {
-  } else if (e) {
-  } else {
-    alert();
-  }
+labels.forEach((label) => {
+  label.innerHTML = label.innerText
+    .spit("")
+    .map(
+      (letter, idx) =>
+        `<span style="transition-delay: ${idx * 50}ms">${letter}</span>`
+    )
+    .join("");
 });
