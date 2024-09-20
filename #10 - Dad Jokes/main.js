@@ -1,12 +1,25 @@
-const jokes = ["A", "B", "C", "D", "E"];
-const changeButton = document.querySelector(".change");
 const joke = document.querySelector(".joke");
+const changeButton = document.querySelector(".change");
 
-changeButton.addEventListener("click", () => {
-  let randIdx = Math.floor(Math.random() * jokes.length);
+changeButton.addEventListener("click", generateJoke);
 
-  console.log(randIdx);
-  console.log(jokes[randIdx]);
-  console.log(joke);
-  joke.innerText = jokes[randIdx];
-});
+generateJoke();
+
+async function generateJoke() {
+  const config = {
+    headers: {
+      Accept: "application/json",
+    },
+  };
+
+  const res = await fetch("https://icanhazdadjoke.com", config);
+  const data = await res.json();
+
+  joke.innerHTML = data.joke;
+
+  //   fetch("https://icanhazdadjoke.com", config) // promise 객체를 돌려줌 -> then으로 받기
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       joke.innerHTML = data.joke;
+  //     });
+}
