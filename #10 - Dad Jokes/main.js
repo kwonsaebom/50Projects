@@ -1,9 +1,9 @@
 const joke = document.querySelector(".joke");
 const changeButton = document.querySelector(".change");
 
-changeButton.addEventListener("click", generateJoke);
-
 generateJoke();
+
+changeButton.addEventListener("click", generateJoke);
 
 async function generateJoke() {
   const config = {
@@ -14,7 +14,7 @@ async function generateJoke() {
 
   const res = await fetch("https://icanhazdadjoke.com", config);
   const data = await res.json();
-
+  const res2 = 0;
   joke.innerHTML = data.joke;
 
   //   fetch("https://icanhazdadjoke.com", config) // promise 객체를 돌려줌 -> then으로 받기
