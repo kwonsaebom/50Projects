@@ -15,6 +15,8 @@ async function generateJoke() {
   const res = await fetch("https://icanhazdadjoke.com", config);
   const data = await res.json();
   const res2 = 0;
+  const res3 = 0;
+
   joke.innerHTML = data.joke;
 
   //   fetch("https://icanhazdadjoke.com", config) // promise 객체를 돌려줌 -> then으로 받기
