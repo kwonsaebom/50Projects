@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css?family=Muli");
+
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: unset;
+  padding: unset;
+}
+
+h1 {
+  margin: unset;
+  padding: unset;
+
+  font-size: unset;
+  font-weight: unset;
+  font-family: unset;
+  font-style: unset;
+}
+
+/* Variable */
+:root {
+  font-family: "Muli", sans-serif;
+  --color-background: #e1e1e1;
+  --color-border: #999;
+  --color-title: #eee;
+}
+/* Layout */
+body {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+}
+/* Design */
+
+body {
+  background-color: var(--color-background);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.title {
+  background-color: var(--color-title);
+  min-width: 150px;
+  border: 1px solid var(--color-border);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+
+  padding: 20px;
+
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+
+  position: relative;
+}
+
+.title .des::before {
+  position: absolute;
+
+  top: -24px;
+  left: 0;
+  right: 0;
+
+  color: #555;
+  font-size: 14px;
+  text-align: center;
+}
+.title.key::before {
+  content: "event.key";
+
+  position: absolute;
+
+  top: -24px;
+  left: 0;
+  right: 0;
+
+  color: #555;
+  font-size: 14px;
+  text-align: center;
+}
+
+.title.keyCode::before {
+  content: "event.keyCode";
+
+  position: absolute;
+
+  top: -24px;
+  left: 0;
+  right: 0;
+
+  color: #555;
+  font-size: 14px;
+  text-align: center;
+}
+
+.title.code::before {
+  content: "event.code";
+
+  position: absolute;
+
+  top: -24px;
+  left: 0;
+  right: 0;
+
+  color: #555;
+  font-size: 14px;
+  text-align: center;
+}
