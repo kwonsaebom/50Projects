@@ -1,5 +1,4 @@
 let container = document.querySelector(".container");
-let title = document.querySelector(".title");
 
 window.addEventListener("keydown", (event) => {
   container.innerHTML = `

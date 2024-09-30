@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css?family=Muli");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: unset;
+  padding: unset;
+}
+
+h3 {
+  margin: unset;
+  padding: unset;
+
+  font-family: unset;
+  font-size: unset;
+  font-weight: unset;
+  font-style: unset;
+}
+
+body {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+:root {
+  font-family: "Muli", sans-serif;
+
+  --color-background: #2b88f0;
+  --color-description: #fff;
+  --color-tag-blue: #273c75;
+  --color-tag-orange: #f0932b;
+}
+
+body {
+  background-color: var(--color-background);
+}
+
+#container {
+  width: 500px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.description {
+  color: var(--color-description);
+  font-size: 1.17em;
+  font-weight: bold;
+  text-align: center;
+}
+
+#input {
+  height: 100px;
+  padding: 10px;
+
+  font-family: inherit;
+  font-size: 1em;
+}
+
+#tag-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.tag {
+  background-color: var(--color-tag-orange);
+  padding: 10px 15px;
+  border-radius: 20px;
+
+  color: white;
+}
+
+.tag.pick {
+  background-color: var(--color-tag-blue);
+}
