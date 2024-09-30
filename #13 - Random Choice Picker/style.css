@@ -6,6 +6,8 @@
 body {
   margin: unset;
   padding: unset;
+
+  overflow: hidden;
 }
 
 h3 {
@@ -57,6 +59,7 @@ body {
 #input {
   height: 100px;
   padding: 10px;
+  border: none;
 
   font-family: inherit;
   font-size: 1em;
@@ -71,7 +74,7 @@ body {
 
 .tag {
   background-color: var(--color-tag-orange);
-  padding: 10px 15px;
+  padding: 10px 20px;
   border-radius: 20px;
 
   color: white;
