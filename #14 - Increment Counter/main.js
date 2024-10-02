@@ -8,12 +8,13 @@ counters.forEach((counter, idx) => {
   const updateCounter = () => {
     if (count < maxValues[idx]) {
       count += increment;
+      console.log(count);
       if (count > maxValues[idx]) {
-        count = maxValues[idx]; // 넘치는 경우 막음
+        count = maxValues[idx];
       }
+      counter.textContent = count;
+      setTimeout(updateCounter, 1);
     }
-    counter.textContent = count;
-    setTimeout(updateCounter, 1);
   };
 
   updateCounter();
