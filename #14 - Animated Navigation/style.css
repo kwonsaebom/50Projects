@@ -1,0 +1,59 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+body,
+ul,
+li,
+a {
+  margin: unset;
+  padding: unset;
+}
+
+a {
+  text-decoration: unset;
+  color: unset;
+}
+
+li {
+  list-style-type: none;
+}
+/* Layout */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Variable & Typography */
+:root {
+  --color-top: #eafbff;
+  --color-bottom: #5290f9;
+}
+
+/* Design */
+body {
+  background-color: var(--color-top);
+  background-image: linear-gradient(
+    to bottom,
+    var(--color-top) 0%,
+    var(--color-top) 50%,
+    var(--color-bottom) 50%,
+    var(--color-bottom) 100%
+  );
+}
+#navbar {
+  background-color: white;
+  padding: 20px;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  gap: 30px;
+}
+
+#nav-items {
+  display: flex;
+  gap: 10px;
+}
